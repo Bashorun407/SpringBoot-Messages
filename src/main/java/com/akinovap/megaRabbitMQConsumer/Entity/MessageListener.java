@@ -10,6 +10,6 @@ public class MessageListener {
     @RabbitListener(queues = MQConfig.QUEUE)
     public void listener(Message message){
 
-        System.out.println(" Message received is: " + message.getMessageContent());
+        System.out.println(" Message received is: " + message.getMessageContent() + " sent by: " + message.getSender());
     }
 }
